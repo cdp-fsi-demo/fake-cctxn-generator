@@ -77,10 +77,10 @@ do
 	python3 $GENERATOR_HOME/fake-cctxn-gen/datagen_transaction.py $GENERATOR_HOME/data/reference_data/customers.csv $GENERATOR_HOME/fake-cctxn-gen/profiles/$i $GENERATOR_HOME $TXN_BEGIN $TXN_END $GENERATOR_HOME/data/transactions/$fname &
 done
 mkdir -p $GENERATOR_HOME/data/reference_data_in/
-sed 1d $GENERATOR_HOME/data/reference_data/age_gender_demographics.csv > $GENERATOR_HOME/data/reference_data_in/age_gender_demographics.csv
-sed 1d $GENERATOR_HOME/data/reference_data/customers.csv  > $GENERATOR_HOME/data/reference_data_in/customers.csv
-sed 1d $GENERATOR_HOME/data/reference_data/locations_partitions.csv > $GENERATOR_HOME/data/reference_data_in/locations_partitions.csv
-sed 1d $GENERATOR_HOME/data/reference_data/merchants.csv > $GENERATOR_HOME/data/reference_data_in/merchants.csv
+cp $GENERATOR_HOME/data/reference_data/age_gender_demographics.csv $GENERATOR_HOME/data/reference_data_in/age_gender_demographics.csv
+cp $GENERATOR_HOME/data/reference_data/customers.csv $GENERATOR_HOME/data/reference_data_in/customers.csv
+cp $GENERATOR_HOME/data/reference_data/locations_partitions.csv $GENERATOR_HOME/data/reference_data_in/locations_partitions.csv
+cp $GENERATOR_HOME/data/reference_data/merchants.csv $GENERATOR_HOME/data/reference_data_in/merchants.csv
 
 #SCRIPT=$(readlink -f "$0")
 #SCRIPTPATH=$(dirname "$SCRIPT")
